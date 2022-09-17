@@ -1,22 +1,25 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace Tests\Unit;
 
 use App\Exceptions\RouteNotFoundException;
 use App\Router;
+use App\Container;
 use PHPUnit\Framework\TestCase;
 
 class RouterTest extends TestCase
 {
     private Router $router;
+    private Container $container;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->router = new Router();
+        $this->container = new Container();
+        $this->router = new Router($this->container);
     }
 
     /** @test */
@@ -64,7 +67,7 @@ class RouterTest extends TestCase
     /** @test */
     public function there_are_no_routes_when_router_is_created(): void
     {
-        $this->assertEmpty((new Router())->routes());
+        $this->assertEmpty((new Router($this->container))->routes());
     }
 
     /**
@@ -75,7 +78,8 @@ class RouterTest extends TestCase
         string $requestUri,
         string $requestMethod
     ): void {
-        $users = new class() {
+        $users = new class()
+        {
             public function delete(): bool
             {
                 return true;
@@ -102,7 +106,7 @@ class RouterTest extends TestCase
     /** @test */
     public function it_resolves_route_from_a_closure(): void
     {
-        $this->router->get('/users', fn() => [1, 2, 3]);
+        $this->router->get('/users', fn () => [1, 2, 3]);
 
         $this->assertSame(
             [1, 2, 3],
@@ -113,7 +117,8 @@ class RouterTest extends TestCase
     /** @test */
     public function it_resolves_route(): void
     {
-        $users = new class() {
+        $users = new class()
+        {
             public function index(): array
             {
                 return [1, 2, 3];

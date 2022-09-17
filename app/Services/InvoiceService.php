@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Services;
 
@@ -19,7 +19,7 @@ class InvoiceService
         $tax = $this->salesTaxService->calculate($amount, $customer);
 
         // 2. process invoice
-        if (! $this->gatewayService->charge($customer, $amount, $tax)) {
+        if (!$this->gatewayService->charge($customer, $amount, $tax)) {
             return false;
         }
 
