@@ -1,8 +1,9 @@
-# DI-Container
+# Learning Project
 
 Main Langugae: PHP
 
 Using: MySQL, NGNIX, Docker, Composer
 
-The main goal:
-Learn DI container
+Practiced:
+✅ DI Container
+✅ Generator
