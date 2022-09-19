@@ -8,3 +8,4 @@ Practiced:
 ✅ DI Container
 ✅ Generator
 ✅ Attributes for routing
+✅ Enums
