@@ -7,3 +7,4 @@ Using: MySQL, NGNIX, Docker, Composer
 Practiced:
 ✅ DI Container
 ✅ Generator
+✅ Attributes for routing
