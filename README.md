@@ -9,6 +9,7 @@ Practiced:
 ✅ Generator
 ✅ Attributes for routing
 ✅ Enums
+✅ CRON Qued Mailing
 
 ✅Added Basic Mailing using Symfony Miling:
 
