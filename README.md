@@ -10,5 +10,5 @@ Practiced:
 ✅ Attributes for routing
 ✅ Enums
 
-✅Added Basic Mailing wiht MailHog:
+✅Added Basic Mailing using Symfony Miling:
 ![](https://github.com/NNishnianidze/Learning-Project/blob/master/Gifs/mailHog.gif)
