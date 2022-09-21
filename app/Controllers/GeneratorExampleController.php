@@ -6,7 +6,6 @@ namespace App\Controllers;
 
 use App\Attributes\Route;
 use App\Models\Ticket;
-use Generator;
 
 class GeneratorExampleController
 {
@@ -21,13 +20,6 @@ class GeneratorExampleController
 
         foreach ($tickets as $ticket) {
             echo $ticket['id'] . ': ' . substr($ticket['content'], 0, 15) . '<br />';
-        }
-    }
-
-    private function lazyRange(int $start, int $end): Generator
-    {
-        for ($i = $start; $i <= $end; $i++) {
-            yield $i;
         }
     }
 }

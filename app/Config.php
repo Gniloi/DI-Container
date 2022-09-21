@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App;
 
@@ -21,6 +21,9 @@ class Config
                 'database' => $env['DB_DATABASE'],
                 'driver'   => $env['DB_DRIVER'] ?? 'mysql',
             ],
+            'mailer' => [
+                'dsn' => $env['MAILER_DSN'] ?? '',
+            ]
         ];
     }
 
