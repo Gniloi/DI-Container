@@ -11,6 +11,6 @@ Practiced:
 ✅ Enums
 ✅ CRON Qued Mailing
 
-✅Added Basic Mailing using Symfony Miling:
+✅Added Basic Mailing using Symfony Mailing:
 
 ![](https://github.com/NNishnianidze/Learning-Project/blob/master/Gifs/mailHog.gif)
